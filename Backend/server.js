@@ -14,4 +14,5 @@ app.use("/api", router);
 const PORT = process.env.PORT || 8000;
 app.listen(PORT, () => {
   console.log(`Server is running on http://localhost:${PORT}`);
+  console.log("Welcome to Movie app");
 });
