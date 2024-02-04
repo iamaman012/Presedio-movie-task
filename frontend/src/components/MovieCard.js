@@ -20,10 +20,10 @@ const MovieCard = ({
     try {
       console.log(id);
       const result = await axios.delete(
-        `http://localhost:8000/api/movies/delete/${id}`
+        `api/movies/delete/${id}`
       );
       console.log(result.data);
-      const response = await axios.get("http://localhost:8000/api/movies");
+      const response = await axios.get("api/movies");
       console.log(response.data.movies);
       setArticles(response.data);
     } catch (error) {

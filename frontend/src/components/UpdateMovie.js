@@ -19,7 +19,7 @@ const UpdateMovie = () => {
     try {
       console.log(id);
       const response = await axios.put(
-        `http://localhost:8000/api/movies/update/${id}`,
+        `api/movies/update/${id}`,
         {
           name,
           director,

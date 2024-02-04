@@ -8,30 +8,30 @@ const Header = () => {
   const [search, setSearch] = useState("");
   const handleLanguage = async (data) => {
     const response = await axios.get(
-      `http://localhost:8000/api/movies/filter?language=${data}`
+      `api/movies/filter?language=${data}`
     );
     setArticles(response.data);
   };
   const handleHome = async () => {
-    const response = await axios.get("http://localhost:8000/api/movies");
+    const response = await axios.get("api/movies");
     setArticles(response.data);
   };
 
   const handleYear = async (data) => {
     const response = await axios.get(
-      `http://localhost:8000/api/movies/filter?releaseYear=${data}`
+      `api/movies/filter?releaseYear=${data}`
     );
     setArticles(response.data);
   };
   const handleRating = async (data) => {
     const response = await axios.get(
-      `http://localhost:8000/api/movies/filter?rating=${data}`
+      `api/movies/filter?rating=${data}`
     );
     setArticles(response.data);
   };
   const handleDirector = async (data) => {
     const response = await axios.get(
-      `http://localhost:8000/api/movies/filter?director=${data}`
+      `api/movies/filter?director=${data}`
     );
     setArticles(response.data);
   };
@@ -42,7 +42,7 @@ const Header = () => {
     try {
       console.log(search);
       const response = await axios.get(
-        `http://localhost:8000/api/movies/search?name=${search}`
+        `api/movies/search?name=${search}`
       );
       console.log(response.data);
       setArticles(response.data);

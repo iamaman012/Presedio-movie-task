@@ -10,7 +10,7 @@ const Maincontainer = (props) => {
   useEffect(() => {
     const init = async () => {
       try {
-        const response = await axios.get("http://localhost:8000/api/movies");
+        const response = await axios.get("api/movies");
         setArticles(response.data);
       } catch (error) {
         console.error("Error fetching movies:", error);
