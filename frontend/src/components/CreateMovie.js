@@ -17,7 +17,7 @@ const CreateMovie = () => {
     try {
       console.log(id);
       const response = await axios.post(
-        "http://localhost:8000/api/movies/add",
+        "api/movies/add",
         {
           id,
           name,
@@ -34,7 +34,7 @@ const CreateMovie = () => {
         }
       );
 
-      const result = await axios.get("http://localhost:8000/api/movies");
+      const result = await axios.get("api/movies");
 
       setArticles(result.data);
       setName("")
