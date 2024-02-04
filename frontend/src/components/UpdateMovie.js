@@ -19,7 +19,7 @@ const UpdateMovie = () => {
     try {
       console.log(id);
       const response = await axios.put(
-        `api/movies/update/${id}`,
+        `movies/update/${id}`,
         {
           name,
           director,
@@ -34,6 +34,10 @@ const UpdateMovie = () => {
           },
         }
       );
+      // const result = await axios.get("movies");
+
+      // // setArticles(result.data);
+
 
       console.log("my response", response.data);
       setIsSuccess(true);

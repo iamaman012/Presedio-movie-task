@@ -3,9 +3,9 @@ import express from "express";
 import router from "./routes/routes.js";
 import { loadMoviesFromFile } from "./controller/controller.js";
 import cors from "cors";
-import { dirname } from 'path';
-import { fileURLToPath } from 'url';
-import path from 'path';
+import { dirname } from "path";
+import { fileURLToPath } from "url";
+import path from "path";
 // import dotenv from "dotenv";
 const app = express();
 
@@ -16,14 +16,14 @@ const __dirname = dirname(__filename);
 
 // Define the path to your build folder
 // console.log(__dirname)
-const buildPath = path.join(__dirname, 'build');
+const buildPath = path.join(__dirname, "build");
 
 // Serve static files from the build folder
 app.use(express.static(buildPath));
 
 // Serve the index.html file
-app.get('/', (req, res) => {
-  res.sendFile(path.join(buildPath, 'index.html'));
+app.get("/", (req, res) => {
+  res.sendFile(path.join(buildPath, "index.html"));
 });
 
 // app.get("/", (req, res) => {
@@ -31,7 +31,7 @@ app.get('/', (req, res) => {
 // });
 
 loadMoviesFromFile();
-app.use("/api", router);
+app.use(router);
 
 const PORT = process.env.PORT || 8000;
 app.listen(PORT, () => {

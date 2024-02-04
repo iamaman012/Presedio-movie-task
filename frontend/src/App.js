@@ -15,7 +15,7 @@ function App() {
           <Landing>
             <Routes>
               <Route path="/" element={<Maincontainer />} />
-              <Route path="/update/:id" element={<UpdateMovie/>}/>
+              <Route path="/update/:id" element={<UpdateMovie />} />
             </Routes>
           </Landing>
         </MovieProvider>

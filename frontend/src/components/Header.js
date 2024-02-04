@@ -7,32 +7,24 @@ const Header = () => {
   const [articles, setArticles] = useMovie();
   const [search, setSearch] = useState("");
   const handleLanguage = async (data) => {
-    const response = await axios.get(
-      `api/movies/filter?language=${data}`
-    );
+    const response = await axios.get(`movies/filter?language=${data}`);
     setArticles(response.data);
   };
   const handleHome = async () => {
-    const response = await axios.get("api/movies");
+    const response = await axios.get("movies");
     setArticles(response.data);
   };
 
   const handleYear = async (data) => {
-    const response = await axios.get(
-      `api/movies/filter?releaseYear=${data}`
-    );
+    const response = await axios.get(`movies/filter?releaseYear=${data}`);
     setArticles(response.data);
   };
   const handleRating = async (data) => {
-    const response = await axios.get(
-      `api/movies/filter?rating=${data}`
-    );
+    const response = await axios.get(`movies/filter?rating=${data}`);
     setArticles(response.data);
   };
   const handleDirector = async (data) => {
-    const response = await axios.get(
-      `api/movies/filter?director=${data}`
-    );
+    const response = await axios.get(`movies/filter?director=${data}`);
     setArticles(response.data);
   };
 
@@ -41,9 +33,7 @@ const Header = () => {
 
     try {
       console.log(search);
-      const response = await axios.get(
-        `api/movies/search?name=${search}`
-      );
+      const response = await axios.get(`movies/search?name=${search}`);
       console.log(response.data);
       setArticles(response.data);
       setSearch("");

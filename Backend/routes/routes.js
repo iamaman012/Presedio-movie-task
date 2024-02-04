@@ -22,7 +22,7 @@ router.post("/movies/add", upload.none(), addNewMovieController);
 router.delete("/movies/delete/:id", deleteMovieController);
 
 // route for updating the movie
-router.put("/movies/update/:id", upload.none(), updateMovieController);
+router.put("/update/movies/update/:id", upload.none(), updateMovieController);
 
 // route for searching the movie based on name
 router.get("/movies/search", searchMovieController);

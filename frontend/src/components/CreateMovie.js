@@ -17,7 +17,7 @@ const CreateMovie = () => {
     try {
       console.log(id);
       const response = await axios.post(
-        "api/movies/add",
+        "movies/add",
         {
           id,
           name,
@@ -34,16 +34,16 @@ const CreateMovie = () => {
         }
       );
 
-      const result = await axios.get("api/movies");
+      const result = await axios.get("movies");
 
       setArticles(result.data);
-      setName("")
-      setId("")
-      setDirector("")
-      setLanguage("")
-      setRating("")
-      setImage("")
-      setYear("")
+      setName("");
+      setId("");
+      setDirector("");
+      setLanguage("");
+      setRating("");
+      setImage("");
+      setYear("");
     } catch (error) {
       console.log("my error", error);
     }

@@ -19,11 +19,9 @@ const MovieCard = ({
   const handleDelete = async (id) => {
     try {
       console.log(id);
-      const result = await axios.delete(
-        `api/movies/delete/${id}`
-      );
+      const result = await axios.delete(`movies/delete/${id}`);
       console.log(result.data);
-      const response = await axios.get("api/movies");
+      const response = await axios.get("movies");
       console.log(response.data.movies);
       setArticles(response.data);
     } catch (error) {
@@ -51,10 +49,13 @@ const MovieCard = ({
           >
             Delete
           </button>
-          <Link className="btn btn-dark border border-white custSearchBtn p-1 m-2 pt-0" to={`/update/${id}`}>
+          <Link
+            className="btn btn-dark border border-white custSearchBtn p-1 m-2 pt-0"
+            to={`/update/${id}`}
+            a
+          >
             Update
           </Link>
-          
         </div>
       </div>
     </>
