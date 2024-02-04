@@ -1,0 +1,12 @@
+.moviedetails{
+    display: flex;
+    flex-direction: column;
+    gap: 1px;
+}
+
+.card-body{
+    padding: 0px 1rem;
+}
+.card-img-top{
+    height: 20rem;
+}

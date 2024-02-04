@@ -1,0 +1,74 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-image: linear-gradient(to right,black,rgb(36, 52, 36))
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+.cusNav{
+  background-color: rgb(0 0 0);
+  border-bottom: 2px solid white;
+}
+
+.custSearch{
+  border: 2px solid rgb(255, 255, 255);
+}
+.custSearch::placeholder{
+  color: white;
+}
+.footer {
+  color: rgba(255, 255, 255, 1);
+  padding: 25px;
+  background: #000000; /* fallback for old browsers */
+ /* Chrome 10-25, Safari 5.1-6 */
+}
+p{
+  margin-bottom: 0px;
+  margin-left: 1rem;
+}
+.card{
+  flex-direction: column;
+  min-width: 0;
+  word-wrap: break-word;
+  background-color: #010101;
+  background-clip: border-box;
+  border: 2px solid #ffffff;
+  border-radius: 0.25rem;
+  color: white;
+}
+
+.navbar-dark .navbar-nav .nav-link{
+  color: white;
+}
+
+.custSearchBtn:hover{
+  border: 2px solid white;
+  background-color: white;
+  color: black;
+}
+
+.card-body-btn{
+  display: flex;
+  justify-content: end;
+}
+
+.updateContainer{
+    margin: 4rem;
+    display: flex;
+    justify-content: center;
+}
+
+.updateForm{
+  width: 40%;
+  padding: 3rem;
+}
+.custAdd{
+  background-color: #000000;
+}

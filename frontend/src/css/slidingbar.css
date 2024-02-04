@@ -1,0 +1,14 @@
+.sliding{
+    position: relative;
+    width: 98vw;
+    display: flex;
+    justify-content: center;
+    padding: 2rem;
+}
+
+.carousel-item{
+    width: 1490px;
+}
+.slideImage{
+    height: 500px;
+}
