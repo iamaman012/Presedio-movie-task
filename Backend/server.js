@@ -7,11 +7,11 @@ import cors from "cors";
 const app = express();
 
 app.use(cors());
-//
-app.get("/:universalURL", (req, res) => {
-  res.send("404 URL NOT FOUND");
-});
-//
+// //
+// app.get("/:universalURL", (req, res) => {
+//   res.send("404 URL NOT FOUND");
+// });
+// //
 loadMoviesFromFile();
 app.use("/api", router);
 
