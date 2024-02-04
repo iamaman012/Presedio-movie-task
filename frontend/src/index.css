@@ -60,7 +60,7 @@ p{
 }
 
 .updateContainer{
-    margin: 4rem;
+    /* margin: 4rem; */
     display: flex;
     justify-content: center;
 }
@@ -71,4 +71,16 @@ p{
 }
 .custAdd{
   background-color: #000000;
+}
+@media only screen and (max-width: 850px) {
+  .updateForm{
+    width: 80%;
+  }
+}
+
+@media only screen and (max-width: 650px) {
+  .updateForm{
+    width: 100%;
+    margin: 0px;
+  }
 }

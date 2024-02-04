@@ -38,7 +38,6 @@ const UpdateMovie = () => {
 
       // // setArticles(result.data);
 
-
       console.log("my response", response.data);
       setIsSuccess(true);
     } catch (error) {
@@ -53,7 +52,7 @@ const UpdateMovie = () => {
   }, [isSuccess, navigate]);
   return (
     <div className="updateContainer ">
-      <form className="text-white m-5 updateForm bg-black border border-white-2 ">
+      <form className="text-white my-5 updateForm bg-black border border-white-2 ">
         <div className="mb-4">
           <h1>Update Movie</h1>
         </div>

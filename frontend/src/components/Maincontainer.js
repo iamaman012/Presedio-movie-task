@@ -36,7 +36,7 @@ const Maincontainer = (props) => {
         <></>
       )}
       <div className="movies">
-        <div className="row">
+        <div className="row mx-auto">
           {articles.movies && articles.movies.length > 0 ? (
             articles.movies.map((movie) => {
               return (

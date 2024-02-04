@@ -30,14 +30,14 @@ const MovieCard = ({
   };
   return (
     <>
-      <div className="card" style={{ width: "18rem" }}>
+      <div className="card mx-auto" style={{ width: "18rem" }}>
         <img src={image} className="card-img-top" alt="..." />
         <div className="card-body">
           <h5 className="card-title fw-bold">{name}</h5>
         </div>
 
         <div className="moviedetails fw-light">
-          <p>Director : {director}</p>
+          <p className="text-truncate">Director : {director}</p>
           <p>Language : {language}</p>
           <p>ReleaseYear : {releaseYear}</p>
           <p>Rating : {rating}</p>
