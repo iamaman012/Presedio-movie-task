@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import axios from "axios";
 
 import { useMovie } from "../context/movieContext";
+import toast from "react-hot-toast";
 
 const CreateMovie = () => {
   const [articles, setArticles] = useMovie();
@@ -35,6 +36,7 @@ const CreateMovie = () => {
       );
 
       const result = await axios.get("movies");
+      toast.success("Movie Addedd Successfully");
 
       setArticles(result.data);
       setName("");
@@ -92,6 +94,7 @@ const CreateMovie = () => {
                     id="recipient-name"
                     value={id}
                     onChange={(e) => setId(e.target.value)}
+                    required
                   />
                 </div>
                 <div className="mb-3">
@@ -104,6 +107,7 @@ const CreateMovie = () => {
                     id="recipient-name"
                     value={name}
                     onChange={(e) => setName(e.target.value)}
+                    required
                   />
                 </div>
                 <div className="mb-3">

@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import axios from "axios";
+import toast from "react-hot-toast";
 
 const UpdateMovie = () => {
   const [name, setName] = useState("");
@@ -39,10 +40,15 @@ const UpdateMovie = () => {
       // // setArticles(result.data);
 
       console.log("my response", response.data);
+      toast.success("Movie Updated Successfully");
       setIsSuccess(true);
     } catch (error) {
       console.log("my error", error);
     }
+  };
+  const handleClose = (e) => {
+    e.preventDefault();
+    navigate("/");
   };
   useEffect(() => {
     if (isSuccess) {
@@ -126,6 +132,13 @@ const UpdateMovie = () => {
           onClick={handleUpdate}
         >
           Update
+        </button>
+        <button
+          type="submit"
+          className="btn btn-dark border border-white custSearchBtn"
+          onClick={handleClose}
+        >
+          Close
         </button>
       </form>
     </div>

@@ -4,6 +4,7 @@ import axios from "axios";
 import { useMovie } from "../context/movieContext";
 // import UpdateMovie from "./UpdateMovie";a
 import { Link } from "react-router-dom";
+import toast from "react-hot-toast";
 
 const MovieCard = ({
   id,
@@ -24,6 +25,7 @@ const MovieCard = ({
       const response = await axios.get("movies");
       console.log(response.data.movies);
       setArticles(response.data);
+      toast.success("Movie Deleted Successfully");
     } catch (error) {
       console.log(error);
     }
